@@ -1,81 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/layui.css" media="all">
+    <link rel="stylesheet" href="../styles/bonetest.css">
+    <title>骨质检测</title>
 </head>
+
 <body>
-    <div class="mainContent">
-        <div>
-            <p>请输入各项指标</p>
-            <div class="selectSex">性别：
-                <select id="sex">
-                    <option value="1">男</option>
-                    <option value="0">女</option>
-                </select>
+    <div class="bonetest">
+        <form class="layui-form bonetest-box" action="">
+            <h2>基本信息</h2>
+            <span>（以下带 * 的为必填）</span>
+            <div class="line"></div>
+            <div class="layui-form-item basic-info">
+                <div class="left">
+                    <label class="layui-form-label down">姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">*年龄</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入年龄"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">*身高</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入身高(cm)"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">*体重</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入体重(kg)"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">*性别</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="sex" value="nan" title="男">
+                        <input type="radio" name="sex" value="nv" title="女" checked>
+                    </div>
+                </div>
+                <div class="right">
+                    <label class="layui-form-label down">肺活量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入肺活量" autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">体脂率</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入体脂率" autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">血压</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入血压" autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">血糖</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入血糖含量" autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label">血脂</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入血脂含量" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                
             </div>
-            <div class="info">年龄：
-                <input type="text" id="age">
+
+            <h2>详细信息</h2>
+            <span>（以下信息需填写医院体检单上的真实数据）</span>
+            <div class="line"></div>
+            <div class="layui-form-item detail-info">
+                <label class="layui-form-label detail-item">*骨密度</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入骨密度"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label detail-item">*白蛋白含量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入白蛋白含量"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label detail-item">*钙含量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入钙含量"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label detail-item">*磷含量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入磷含量"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label detail-item">*碱性磷酸酶含量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入碱性磷酸酶含量"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label detail-item">*血红蛋白含量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入血红蛋白含量"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label detail-item">*淋巴细胞含量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入血红蛋白含量"
+                        autocomplete="off" class="layui-input">
+                </div>
             </div>
-            <div class="info">身高(cm)：
-                <input type="text" id="height">
+            <div class="layui-form-item sure-button" pane>
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
             </div>
-            <div class="info">体重(kg)：
-                <input type="text" id="weight">
-            </div>
-            <div class="info">骨密度：
-                <input type="text" id="bmd">
-            </div>
-            <div class="info">白蛋白含量：
-                <input type="text" id="alb">
-            </div>
-            <div class="info">钙含量：
-                <input type="text" id="ca">
-            </div>
-            <div class="info">磷含量：
-                <input type="text" id="p">
-            </div>
-            <div class="info">碱性磷酸酶含量：
-                <input type="text" id="alp">
-            </div>
-            <div class="info">血红蛋白含量：
-                <input type="text" id="hb">
-            </div>
-            <div class="info">淋巴细胞含量：
-                <input type="text" id="lym">
-            </div>
-            <div class="result">
-                <button id="sure">确认</button>
-                <button id="cancel">取消</button>
-            </div>
-        </div>
-        <div>
-            <div>
-                <p>功能概况:</p>
-                <p>骨质疏松在我国50岁以上的人群中发病率约为15.7%，带来的最严重并发症就是骨折。在老年人当中，
-              因骨质疏松导致的骨折主要发生在脊柱、髋部、肩部、腕部等部位。骨折后会导致疼痛、长期卧床；
-              有可能引起褥疮、肺炎、血栓等一系列并发症，大大降低了老年人的生活质量；更严重则是导致死亡。
-              然而，尽管骨质疏松对老年人的危害如此巨大，但是许多患者却不知道该如何预防。
-              本平台根据输入的各项指标数据（包括性别、年龄、身高、体重、骨密度、白蛋白含量、钙含量、磷含量、
-              碱性磷酸酶含量、血红蛋白含量、淋巴细胞含量）预测骨质疏松骨折预测等级（轻微度、中度、重度、危险度）。
-              同时根据骨质疏松骨折预测等级给患者提出防患建议（包括运动量建议、饮食建议、用药建议和辅助治疗建议）。
-                </p>
-            </div>
-            <div>
-                <p>相关词条:</p>
-                <a href="https://baike.baidu.com/item/%E8%80%81%E5%B9%B4%E4%BA%BA%E9%AA%A8%E8%B4%A8%E7%96%8F%E6%9D%BE/4992636?fr=aladdin">点击了解老年人骨质疏松是什么以及相应的症状体征以及简单的预防措施<br></a>
-                <a href="https://www.cn-healthcare.com/article/20141020/content-462027.html">我国老年骨质疏松发病率超15% 社区护理待改进<br></a>
-                <a href="http://baijiahao.baidu.com/s?id=1568065582824001&wfr=spider&for=pc">老年人骨质疏松四大原因<br></a>
-                <a href="http://www.39yst.com/zhuanti/guzhishusong/">骨质疏松的症状_老年骨质疏松症的表现及自然治疗法<br></a>
-                <a href="http://www.csobmr.org.cn/">中华医学会骨质疏松和骨矿盐疾病学分会<br></a>
-                <a href="http://gk.39.net/a/161025/5024170.html">骨质疏松十大认知误区<br></a>
-                <a href="http://www.chinacjo.com/ch/index.aspx">中国骨质疏松杂志<br></a>
-                <a href="https://www.haodf.com/jibing/guzhishusong.htm">骨质疏松哪家医院治得好治疗骨质疏松哪个医生好<br></a>
-                <a href="http://www.sohu.com/a/233160813_100074487">喝可乐真的导致骨质疏松吗？</a>
-            </div>
-        </div>
-    </div> 
+        </form>
+    </div>
+
+    <script src="../src/layui.js"></script>
+    <script>
+        layui.use('form', function () {
+            var form = layui.form;
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                layer.open({
+                    type: 1,
+                    title: '测试结果',
+                    content: '您的测试等级为: '
+                });
+                return false;
+            });
+        });
+    </script>
 </body>
+
 </html>
