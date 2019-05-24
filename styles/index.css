@@ -1,21 +1,70 @@
-* {
-	padding: 0;
-	margin: 0;
+body, html {
+	height: 100%;
 }
-.nav {
+.layui-row {
+	height: 100%;
+}
+.navigation-bar {
+	height: 100%;
+	background-color: #3bb7af;
+	position: relative;
+}
+.logo {
+	width: 60%;
+	padding-bottom: 30px;
+}
+.user {
+	position: absolute;
+	bottom: 20px;
+	right: 25px;
+}
+.user a {
+	font-size: 14px;
+	color: #f2f2f2;
+}
+.content-area {
+	height: 100%;
+	overflow: hidden;
+}
+.index {
+	height: 100%;
+}
+.carousel-img {
 	width: 100%;
-	height: 100px;
-	background-color: #02A1EB;
+	height: 100%;
+}
+.function-box {
+	width: 56%;
+	height: auto;
+	margin-left: 22%;
+	margin-top: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.nav a {
-	font-size:16px;
-    color:white;
-    margin-right:7px;
-	margin-left:7px;
+.bone-test {
+	width: 230px;
+	height: 290px;
+	background-color: #39a9d5;
+	border-radius: 7px;
+	border: 1px solid #39a9d5;
 }
-.mainContent {
-	background-color:#E4F7FF;
+.bone-test img {
+	
+}
+.pre-treatment {
+	width: 230px;
+	height: 290px;
+	background-color: #3bb7af;
+	border-radius: 7px;
+	border: 1px solid #3bb7af;
+}
+.hospital-intro {
+	height: 100%;
+}
+.expert-intro {
+	height: 100%;
+}
+.medical-serve {
+	height: 100%;
 }

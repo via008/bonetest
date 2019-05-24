@@ -1,100 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="styles/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="src/css/layui.css" media="all">
+    <link rel="stylesheet" href="styles/index.css">
     <title>骨质检测</title>
 </head>
+
 <body>
-    <nav class="nav">
-        <img src="static/logo.png" />
-        <span class="navContent">
-            <a href="#">网站首页</a>| 
-            <a href="#">功能概况</a>| 
-            <a href="#">相关词条</a>
-        </span>
-        <span class="register">
-            <a href="page/login.html">用户登录</a>
-            <a href="page/register.html">注册</a>
-        </span>
-    </nav>
-    <div class="mainContent">
-        <div>
-            <p>请输入各项指标</p>
-            <div class="selectSex">性别：
-                <select id="sex">
-                    <option value="1">男</option>
-                    <option value="0">女</option>
-                </select>
+    <div class="layui-row">
+        <div class="layui-col-xs2 navigation-bar">
+            <div>
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item"><img src="static/logo.png" class="logo"></img></li>
+                    <li class="layui-nav-item"><a href="#index">首页</a></li>
+                    <li class="layui-nav-item"><a href="#hospital-intro">医院简介</a></li>
+                    <li class="layui-nav-item"><a href="#expert-intro">专家简介</a></li>
+                    <li class="layui-nav-item"><a href="#medical-serve">医疗服务</a></li>
+                </ul>
             </div>
-            <div class="info">年龄：
-                <input type="text" id="age">
-            </div>
-            <div class="info">身高(cm)：
-                <input type="text" id="height">
-            </div>
-            <div class="info">体重(kg)：
-                <input type="text" id="weight">
-            </div>
-            <div class="info">骨密度：
-                <input type="text" id="bmd">
-            </div>
-            <div class="info">白蛋白含量：
-                <input type="text" id="alb">
-            </div>
-            <div class="info">钙含量：
-                <input type="text" id="ca">
-            </div>
-            <div class="info">磷含量：
-                <input type="text" id="p">
-            </div>
-            <div class="info">碱性磷酸酶含量：
-                <input type="text" id="alp">
-            </div>
-            <div class="info">血红蛋白含量：
-                <input type="text" id="hb">
-            </div>
-            <div class="info">淋巴细胞含量：
-                <input type="text" id="lym">
-            </div>
-            <div class="result">
-                <button id="sure">确认</button>
-                <button id="cancel">取消</button>
+            <div class="user">
+                <a href="page/login.html">登录 | </a>
+                <a href="page/register.html">注册</a>
             </div>
         </div>
-        <div>
-            <div>
-                <p>功能概况:</p>
-                <p>骨质疏松在我国50岁以上的人群中发病率约为15.7%，带来的最严重并发症就是骨折。在老年人当中，
-              因骨质疏松导致的骨折主要发生在脊柱、髋部、肩部、腕部等部位。骨折后会导致疼痛、长期卧床；
-              有可能引起褥疮、肺炎、血栓等一系列并发症，大大降低了老年人的生活质量；更严重则是导致死亡。
-              然而，尽管骨质疏松对老年人的危害如此巨大，但是许多患者却不知道该如何预防。
-              本平台根据输入的各项指标数据（包括性别、年龄、身高、体重、骨密度、白蛋白含量、钙含量、磷含量、
-              碱性磷酸酶含量、血红蛋白含量、淋巴细胞含量）预测骨质疏松骨折预测等级（轻微度、中度、重度、危险度）。
-              同时根据骨质疏松骨折预测等级给患者提出防患建议（包括运动量建议、饮食建议、用药建议和辅助治疗建议）。
-                </p>
+        <div class="layui-col-xs10 content-area">
+            <div class="index">
+                <a name="index"></a>
+                <div class="layui-carousel" id="carousel">
+                    <div carousel-item>
+                        <div>
+                            <img class="carousel-img" src="static/carousel1.jpeg">
+                        </div>
+                        <div>
+                            <img class="carousel-img" src="static/carousel2.jpeg">
+                        </div>
+                        <div>
+                            <img class="carousel-img" src="static/carousel3.jpeg">
+                        </div>
+                        <div>
+                            <img class="carousel-img" src="static/carousel4.jpeg">
+                        </div>
+                        <div>
+                            <img class="carousel-img" src="static/carousel5.jpeg">
+                        </div>
+                    </div>
+                </div>
+                <div class="function-box">
+                    <div class="bone-test">
+                        <img src="static/bonetest.png">
+                        <div>骨质检测</div>
+                    </div>
+                    <div class="pre-treatment">
+                        <img src="static/treatment.png">
+                        <div>预约治疗</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>相关词条:</p>
-                <a href="https://baike.baidu.com/item/%E8%80%81%E5%B9%B4%E4%BA%BA%E9%AA%A8%E8%B4%A8%E7%96%8F%E6%9D%BE/4992636?fr=aladdin">点击了解老年人骨质疏松是什么以及相应的症状体征以及简单的预防措施<br></a>
-                <a href="https://www.cn-healthcare.com/article/20141020/content-462027.html">我国老年骨质疏松发病率超15% 社区护理待改进<br></a>
-                <a href="http://baijiahao.baidu.com/s?id=1568065582824001&wfr=spider&for=pc">老年人骨质疏松四大原因<br></a>
-                <a href="http://www.39yst.com/zhuanti/guzhishusong/">骨质疏松的症状_老年骨质疏松症的表现及自然治疗法<br></a>
-                <a href="http://www.csobmr.org.cn/">中华医学会骨质疏松和骨矿盐疾病学分会<br></a>
-                <a href="http://gk.39.net/a/161025/5024170.html">骨质疏松十大认知误区<br></a>
-                <a href="http://www.chinacjo.com/ch/index.aspx">中国骨质疏松杂志<br></a>
-                <a href="https://www.haodf.com/jibing/guzhishusong.htm">骨质疏松哪家医院治得好治疗骨质疏松哪个医生好<br></a>
-                <a href="http://www.sohu.com/a/233160813_100074487">喝可乐真的导致骨质疏松吗？</a>
+            <div class="hospital-intro">
+                <a name="hospital-intro"></a>
+                123
+            </div>
+            <div class="expert-intro">
+                <a name="expert-intro"></a>
+                456
+            </div>
+            <div class="medical-serve">
+                <a name="medical-serve"></a>
+                789
             </div>
         </div>
     </div>
-    <footer>
-        <a href="#">关于我们</a>|
-        <a href="#">意见建议</a>|
-        <a href="http://www.cq7y.com/">合作医院</a>|
-        <a href="#">联系我们</a>
-    </footer>
+
+    <!-- <script src="script/index.js"></script> -->
+    <script src="src/layui.js"></script>
+    <script>
+        layui.use('carousel', function() {
+            var carousel = layui.carousel
+            carousel.render({
+                elem: '#carousel',
+                width: '100%', //设置容器宽度
+                arrow: 'always', //始终显示箭头
+            })
+        })
+    </script>
 </body>
+
 </html>
