@@ -1004,8 +1004,8 @@ body .layui-table-tips .layui-layer-content{background: none; padding: 0; box-sh
 
 
 /** 面包屑 **/
-.layui-breadcrumb{visibility: hidden; font-size: 0;}
-.layui-breadcrumb>*{font-size: 14px;}
+/* .layui-breadcrumb{visibility: hidden; font-size: 0;} */
+.layui-breadcrumb>*{font-size: 16px;}
 .layui-breadcrumb a{color: #999 !important;}
 .layui-breadcrumb a:hover{color: #5FB878 !important;}
 .layui-breadcrumb a cite{color: #666; font-style: normal;}
