@@ -25,7 +25,7 @@ body, html {
     width: 50%;
     height: 100%;
     display: inline-block;
-    background-color: white;
+    background-color: aliceblue;
     text-align: start;
 }
 .bonetest-box h2 {
@@ -36,6 +36,7 @@ body, html {
     opacity: 0.5;
 }
 .basic-info {
+    margin-top: 20px;
     margin-left: 80px;
 }
 .left {
@@ -52,10 +53,17 @@ body, html {
     padding-top: 27px;
 }
 .detail-info {
+    margin-top: 20px;
     margin-left: 80px;
 }
 .sure-button {
     width: 100%;
     text-align: center;
     margin-top: 40px;
+}
+.breadcrumb {
+    margin: 20px 20px 10px 20px;
+}
+.breadcrumb a {
+    color: black!important;
 }

@@ -89,7 +89,7 @@
                 xhrRequest("post", "http://rap2api.taobao.org/app/mock/7602/user/register", dataSubmit);
                 
                 const location = window.location.href;
-                const domin = location.substring(0, getIndex(location, '/', 2)) + "/index.html?username=yu";
+                const domin = location.substring(0, getIndex(location, '/', 1)) + "/login.html";
                 window.location.href = domin;
 
                 return false

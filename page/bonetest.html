@@ -13,6 +13,12 @@
 <body>
     <div class="bonetest">
         <form class="layui-form bonetest-box" action="">
+            <div class="breadcrumb">
+                <span class="layui-breadcrumb">
+                    <a href="../index.html?username=yu"> << 回到首页 </a>
+                </span>
+            </div>
+
             <h2>基本信息</h2>
             <span>（以下带 * 的为必填）</span>
             <div class="line"></div>
@@ -72,40 +78,44 @@
             <span>（以下信息需填写医院体检单上的真实数据）</span>
             <div class="line"></div>
             <div class="layui-form-item detail-info">
-                <label class="layui-form-label detail-item">*骨密度</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入骨密度"
-                        autocomplete="off" class="layui-input">
+                <div class="left">
+                    <label class="layui-form-label detail-item down">*骨密度</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入骨密度"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label detail-item">*白蛋白含量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入白蛋白含量"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label detail-item">*钙含量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入钙含量"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label detail-item">*磷含量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入磷含量"
+                            autocomplete="off" class="layui-input">
+                    </div>
                 </div>
-                <label class="layui-form-label detail-item">*白蛋白含量</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入白蛋白含量"
-                        autocomplete="off" class="layui-input">
-                </div>
-                <label class="layui-form-label detail-item">*钙含量</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入钙含量"
-                        autocomplete="off" class="layui-input">
-                </div>
-                <label class="layui-form-label detail-item">*磷含量</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入磷含量"
-                        autocomplete="off" class="layui-input">
-                </div>
-                <label class="layui-form-label detail-item">*碱性磷酸酶含量</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入碱性磷酸酶含量"
-                        autocomplete="off" class="layui-input">
-                </div>
-                <label class="layui-form-label detail-item">*血红蛋白含量</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入血红蛋白含量"
-                        autocomplete="off" class="layui-input">
-                </div>
-                <label class="layui-form-label detail-item">*淋巴细胞含量</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入血红蛋白含量"
-                        autocomplete="off" class="layui-input">
+                <div class="right">
+                    <label class="layui-form-label detail-item down">*碱性磷酸酶含量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入碱性磷酸酶含量"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label detail-item">*血红蛋白含量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入血红蛋白含量"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                    <label class="layui-form-label detail-item">*淋巴细胞含量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入血红蛋白含量"
+                            autocomplete="off" class="layui-input">
+                    </div>
                 </div>
             </div>
             <div class="layui-form-item sure-button" pane>
