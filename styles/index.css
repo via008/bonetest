@@ -49,6 +49,7 @@ body, html {
 	background-color: #39a9d5;
 	border-radius: 7px;
 	border: 1px solid #39a9d5;
+	margin-right: 20px;
 }
 .pre-treatment {
 	display: block;
@@ -57,6 +58,7 @@ body, html {
 	background-color: #3bb7af;
 	border-radius: 7px;
 	border: 1px solid #3bb7af;
+	margin-left: 20px;
 }
 .icon-img {
 	width: 100%;

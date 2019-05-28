@@ -56,9 +56,9 @@
         <form class="layui-form" action="">
             <label class="login-title">登录</label>
             <div class="layui-form-item">
-                <label class="layui-form-label">昵称</label>
+                <label class="layui-form-label">用户名</label>
                 <div class="layui-input-block">
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入昵称"
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
                         autocomplete="off" class="layui-input">
                 </div>
                 <label class="layui-form-label">密码</label>
@@ -67,12 +67,32 @@
                         autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-input-block submit">
-                    <button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+                    <button class="layui-btn" lay-submit lay-filter="login">提交</button>
                     <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                 </div>
             </div>
         </form>
     </div>
+
+    <script src="../src/layui.js"></script>
+    <script src="../script/index.js"></script>
+    <script>
+        layui.use('form', function() {
+            var form = layui.form;
+
+            form.on('submit(login)', function(data) {
+                const dataSubmit = JSON.stringify(data.field);
+
+                xhrRequest("post", "http://rap2api.taobao.org/app/mock/7602/user/register", dataSubmit);
+                
+                const location = window.location.href;
+                const domin = location.substring(0, getIndex(location, '/', 2)) + "/index.html?username=yu";
+                window.location.href = domin;
+
+                return false
+            })
+        })
+    </script>
 </body>
 
 </html>

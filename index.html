@@ -23,12 +23,12 @@
                 </ul>
             </div>
             <div class="user">
-                <div class="no-login">
+                <div id="logining">
                     <a href="page/login.html">登录 | </a>
                     <a href="page/register.html">注册</a>
                 </div>
-                <div class="login" title="点击查看历史记录">
-                    <a href="page/history.html">zhangqin</a>
+                <div id="logined" title="点击查看历史记录">
+                    <a href="page/history.html">yu</a>
                 </div>
             </div>
         </div>
@@ -81,20 +81,20 @@
             </div>
             <div class="hospital-intro">
                 <a name="hospital-intro"></a>
-                123
+                有待增加...
             </div>
             <div class="expert-intro">
                 <a name="expert-intro"></a>
-                456
+                有待增加...
             </div>
             <div class="medical-serve">
                 <a name="medical-serve"></a>
-                789
+                有待增加...
             </div>
         </div>
     </div>
 
-    <!-- <script src="script/index.js"></script> -->
+    <script src="script/index.js"></script>
     <script src="src/layui.js"></script>
     <script>
         layui.use('carousel', function() {
@@ -105,6 +105,20 @@
                 arrow: 'always', //始终显示箭头
             })
         })
+
+        // 登录后右下角显示用户名，没有登录时显示 登录|注册 按钮
+        window.onload = function() {
+            var logining = document.getElementById('logining');
+            var logined = document.getElementById('logined');
+
+            if (getQuery('username')) {
+                logining.style.display = 'none';
+                logined.style.display = 'block';
+            } else {
+                logined.style.display = 'none';
+                logining.style.display = 'block';
+            }
+        }
     </script>
 </body>
 

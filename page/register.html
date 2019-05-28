@@ -84,10 +84,15 @@
             var form = layui.form;
 
             form.on('submit(register)', function(data) {
-                var data = xhrRequest("post", "http://rap2api.taobao.org/app/mock/7602/user/register");
+                const dataSubmit = JSON.stringify(data.field);
+
+                xhrRequest("post", "http://rap2api.taobao.org/app/mock/7602/user/register", dataSubmit);
+                
                 const location = window.location.href;
-                const domin = location.substring(0, getIndex(location, '/', 2)) + "/index.html?username=" + data.username;
+                const domin = location.substring(0, getIndex(location, '/', 2)) + "/index.html?username=yu";
                 window.location.href = domin;
+
+                return false
             })
         })
     </script>

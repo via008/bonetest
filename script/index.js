@@ -1,10 +1,10 @@
 // ajax 请求
-function xhrRequest(method, url) {
+function xhrRequest(method, url, data) {
     var xhr = new XMLHttpRequest();
     var data;
 
     xhr.open(method, url, true);
-    xhr.send();
+    xhr.send(data);
 
     // 接收响应数据
     xhr.onreadystatechange = function() {
@@ -28,4 +28,18 @@ function getIndex(str, char, n) {
         x = str.lastIndexOf(char, x-1);
     }
     return x;
+}
+
+// 得到URL的查询参数
+function getQuery(key) {
+    const query = window.location.search.substring(1);
+    const keys = query.split("&");
+
+    for (let i=0; i<keys.length; i++) {
+        var value = keys[i].split("=");
+        if (value[0] == key) {
+            return value[1];
+        }
+    }
+    return false;
 }
